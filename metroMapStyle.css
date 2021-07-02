@@ -1,0 +1,40 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
+    background-color: darkcyan;
+    background-image: linear-gradient(to right, gray, gainsboro,white, wheat); /* rgb(154, 255, 206)  rgb(57, 255, 255)*/
+}
+
+#map {
+    height: 600px;
+    width: 800px;
+    border: 1px black solid;
+}
+#p {
+    text-align: center;
+    font-size: 25px;
+}
+
+#routeNumber {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border-radius: 4px;
+    size: 1000px;
+    width: 100px;
+}
+
+#divInput {
+    border: 25px;
+    max-width: 25px;
+    margin: auto;
+}
+
+.jumbotron {
+    background-color: rgb(193, 255, 255);
+    color: red;
+    text-shadow: 2px 3px blue;
+    text-align: center;
+}
