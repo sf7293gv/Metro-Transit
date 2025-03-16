@@ -1,40 +1,79 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 10px;
-    background-color: darkcyan;
-    background-image: linear-gradient(to right, gray, gainsboro,white, wheat); /* rgb(154, 255, 206)  rgb(57, 255, 255)*/
+/* General Page Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", Arial, sans-serif; /* Modern, professional font */
+    background: linear-gradient(to right, gray, gainsboro, white, wheat);
+    overflow: hidden;
 }
 
+/* Fullscreen Map */
 #map {
-    height: 600px;
-    width: 800px;
-    border: 1px black solid;
-}
-#p {
-    text-align: center;
-    font-size: 25px;
+    height: 100vh; /* Full height */
+    width: 100vw; /* Full width */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
+/* Sidebar Overlay - Bigger & Taller */
+.sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 360px; /* Increased width */
+    height: 80vh; /* Increased height based on your red box */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Above map */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Even spacing */
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.metro-logo {
+    width: 180px; /* Slightly bigger */
+    height: auto;
+}
+
+/* Input Field */
 #routeNumber {
-    font-size: 16px;
-    font-size: max(16px, 1em);
-    font-family: inherit;
-    padding: 0.25em 0.5em;
-    background-color: #fff;
-    border-radius: 4px;
-    size: 1000px;
-    width: 100px;
-}
-
-#divInput {
-    border: 25px;
-    max-width: 25px;
-    margin: auto;
-}
-
-.jumbotron {
-    background-color: rgb(193, 255, 255);
-    color: red;
-    text-shadow: 2px 3px blue;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
     text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Button - Bigger & More Professional */
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
 }

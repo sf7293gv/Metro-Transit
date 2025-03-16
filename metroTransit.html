@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Metro Transit Bus Routes</title>
 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
@@ -12,7 +14,8 @@
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="metroMapStyle.css">
 
@@ -20,25 +23,19 @@
 </head>
 <body>
 
-<div class="jumbotron">
-    <h1>Metro Transit</h1>
-</div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="Metro_Transit.png" alt="Metro Transit Logo" class="metro-logo">
+        </div>
+        <p id="p">Enter a bus route between 2 - 852:</p>
+        <input id="routeNumber" type="number" min="2" max="852">
+        <br>
+        <button class="btn btn-primary" id="button">Click here to get all route buses in service</button>
+    </div>
 
-<p id="p">Enter a bus route between 2 - 852:</p>
-<div id="divInput">
-    <input id="routeNumber" type="number" min="2" max="852">
-</div>
-<br>
-<div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-primary" id="button">Click here to get all route busses in service</button>
-</div>
-
-
-<br><br>
-
-<div id="map" class="mx-auto">
-
-</div>
+    <!-- Fullscreen Map -->
+    <div id="map"></div>
 
 </body>
 </html>
